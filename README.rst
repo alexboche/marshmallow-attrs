@@ -125,7 +125,7 @@ function.
     @dataclass
     class City:
       name: Optional[str]
-      buildings: List[Building] = attr.ib(factory=lambda: [])
+      buildings: List[Building] = attr.ib(factory=list)
 
     # City.Schema contains a marshmallow schema class
     city, _ = City.Schema().load({
